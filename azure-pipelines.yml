@@ -24,3 +24,9 @@ steps:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-RESULTS.xml'
   displayName: 'publish test results'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: '**\*.js;package.json'
+    publishLocation: 'Container'
