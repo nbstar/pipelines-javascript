@@ -25,6 +25,12 @@ steps:
     testResultsFiles: '**/TEST-RESULTS.xml'
   displayName: 'publish test results'
 
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    publishRegistry: 'useFeed'
+    publishFeed: 'd97993aa-c244-425a-9062-763432b37e21'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
