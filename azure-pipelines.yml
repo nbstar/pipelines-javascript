@@ -30,9 +30,11 @@ steps:
     command: 'publish'
     publishRegistry: 'useFeed'
     publishFeed: 'd97993aa-c244-425a-9062-763432b37e21'
+  displayName: 'publish artifact to my feed'
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: '**\*.js;package.json'
     publishLocation: 'Container'
+  displayName: 'publish artifact to $(Build.ArtifactStagingDirectory)'
