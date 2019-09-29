@@ -1,12 +1,12 @@
 {
   "name": "helloworld",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Hello World",
   "main": "server.js",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "liuyongwen",
+    "email": "xxx@yyy.com"
   },
   "dependencies": {
     "express": "^4.13.3",
